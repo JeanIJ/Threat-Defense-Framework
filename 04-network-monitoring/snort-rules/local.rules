@@ -1,0 +1,46 @@
+# Snort Local Rules — SOC Assessment Lab
+# Place in /etc/snort/rules/local.rules
+# Test with: snort -T -c /etc/snort/snort.conf
+
+# SID Range: 1000001-1000004 (Local use only)
+
+# Rule 1000001: Detect C2 beacon to known malicious domain
+alert tcp any any -> any 443 (
+    msg:"SYNTH APT C2 Beacon Detected"; 
+    flow:established,to_server; 
+    content:"cdn-updates.lab-synth.net"; http_header; 
+    detection_filter:track by_src, count 4, seconds 300; 
+    classtype:trojan-activity; 
+    sid:1000001; 
+    rev:1;
+)
+
+# Rule 1000002: Detect horizontal port scanning
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (
+    msg:"SYNTH Horizontal Port Scan"; 
+    flags:S,12; 
+    threshold:type both, track by_src, count 20, seconds 60; 
+    classtype:attempted-recon; 
+    sid:1000002; 
+    rev:1;
+)
+
+# Rule 1000003: Detect LSASS access via SMB
+alert tcp $HOME_NET any -> $HOME_NET 445 (
+    msg:"SYNTH Possible LSASS Dump via SMB"; 
+    flow:to_server,established; 
+    content:"|5c}lsass|2e|exe"; 
+    nocase; 
+    classtype:attempted-admin; 
+    sid:1000003; 
+    rev:1;
+)
+
+# Rule 1000004: Detect ICMP tunneling (oversized packets)
+alert icmp any any -> any any (
+    msg:"SYNTH Large ICMP Packet - Possible Tunnel"; 
+    dsize:>1000; 
+    classtype:attempted-dos; 
+    sid:1000004; 
+    rev:1;
+)

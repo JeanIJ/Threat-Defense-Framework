@@ -1,0 +1,22 @@
+# User Account Audit — BEFORE Hardening
+# Date: 2026-05-22
+# Command: cat /etc/passwd && groups [user]
+
+root:x:0:0:root:/root:/bin/bash
+admin:x:1000:1000:Admin User:/home/admin:/bin/bash
+  Groups: admin sudo adm docker
+
+backupsvc:x:1001:1001:Backup Service:/home/backupsvc:/bin/bash
+  Groups: backupsvc sudo
+
+testuser:x:1002:1002:Test Account:/home/testuser:/bin/bash
+  Groups: testuser sudo adm
+
+guest:x:1003:1003:Guest:/home/guest:/bin/bash
+  Groups: guest users
+
+# Risk Summary:
+# - 3 accounts with sudo (overprivileged)
+# - 1 service account with interactive shell
+# - 1 test account active in production
+# - 1 guest account with weak password

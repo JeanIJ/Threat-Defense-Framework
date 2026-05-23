@@ -1,0 +1,26 @@
+# User Account Audit — AFTER Hardening
+# Date: 2026-05-22
+# Command: cat /etc/passwd && groups [user]
+
+root:x:0:0:root:/root:/bin/bash
+  Status: Password rotated, key-based auth enforced
+
+admin:x:1000:1000:Admin User:/home/admin:/bin/bash
+  Groups: admin sudo adm
+  Changes: Removed from docker group
+
+backupsvc:x:1001:1001:Backup Service:/nonexistent:/usr/sbin/nologin
+  Groups: backup
+  Changes: Removed sudo, disabled interactive shell
+
+testuser:x:1002:1002:Test Account:/home/testuser:/bin/bash
+  Groups: testuser users
+  Status: DISABLED (passwd -l testuser)
+  Note: Scheduled for deletion after 7-day grace period
+
+# Deleted: guest account removed entirely
+
+# Verification:
+# sudo audit: OK
+# service accounts: Hardened
+# inactive accounts: Disabled

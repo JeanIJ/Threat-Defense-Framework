@@ -1,0 +1,19 @@
+# Ignore real sensitive files
+*.pcap
+*.pcapng
+*.eml
+*.exe
+*.dll
+*.zip
+*.tar.gz
+
+# But keep our synthetic samples
+!04-network-monitoring/pcaps/README.md
+!02-attack-malware-analysis/phishing/email-headers.eml
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore logs
+*.log

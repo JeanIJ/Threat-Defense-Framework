@@ -1,7 +1,6 @@
 # SocSecurityAssessment
 
 **Author:** Jean Irakiza
-**Date:** May 2026
 **Environment:** Linux (Kali), VirtualBox Lab, Enterprise Network Simulation
 
 ## Project Overview

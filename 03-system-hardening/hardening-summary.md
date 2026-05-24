@@ -1,6 +1,5 @@
 # System Hardening Summary
 **Analyst:** Jean Irakiza
-  **Date:** 2026-05-22
   **System:** Kali Lab Workstation (simulated enterprise endpoint) 
 
 ---

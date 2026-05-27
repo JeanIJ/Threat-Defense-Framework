@@ -17,3 +17,7 @@ Thumbs.db
 
 # Ignore logs
 *.log
+
+# Allow real lab capture files and screenshots
+!04-network-monitoring/pcaps/real-traffic.pcap
+!04-network-monitoring/pcaps/screenshots/*.png

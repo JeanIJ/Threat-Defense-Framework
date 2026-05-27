@@ -1,0 +1,48 @@
+kali     tty7         :0               Tue May 26 22:17 - still logged in
+lightdm  tty7         :0               Tue May 26 22:17 - 22:17  (00:00)
+kali     tty7         :0               Tue May 26 19:55 - still logged in
+lightdm  tty7         :0               Tue May 26 19:55 - 19:55  (00:00)
+kali     tty7         :0               Fri May 22 20:33 - still logged in
+lightdm  tty7         :0               Fri May 22 20:32 - 20:33  (00:01)
+kali     tty7         :0               Fri May 22 16:47 - still logged in
+lightdm  tty7         :0               Fri May 22 16:47 - 16:47  (00:00)
+kali     tty7         :0               Fri May 22 08:05 - still logged in
+lightdm  tty7         :0               Fri May 22 08:05 - 08:05  (00:00)
+kali     tty7         :0               Fri May 22 08:02 - still logged in
+lightdm  tty7         :0               Fri May 22 08:01 - 08:02  (00:00)
+postgres pts/2                         Thu May 21 20:44 - 20:44  (00:00)
+kali     tty7         :0               Thu May 21 20:33 - still logged in
+lightdm  tty7         :0               Thu May 21 20:32 - 20:33  (00:00)
+kali     tty7         :0               Wed May 20 21:49 - still logged in
+lightdm  tty7         :0               Wed May 20 21:49 - 21:49  (00:00)
+kali     tty7         :0               Mon May 18 21:20 - still logged in
+lightdm  tty7         :0               Mon May 18 21:20 - 21:20  (00:00)
+kali     tty7         :0               Mon May 18 09:45 - still logged in
+lightdm  tty7         :0               Mon May 18 09:45 - 09:45  (00:00)
+kali     tty7         :0               Sun May 17 21:49 - still logged in
+lightdm  tty7         :0               Sun May 17 21:48 - 21:49  (00:00)
+kali     tty7         :0               Sun May 17 21:30 - still logged in
+lightdm  tty7         :0               Sun May 17 21:29 - 21:30  (00:00)
+kali     tty7         :0               Wed May 13 19:50 - still logged in
+lightdm  tty7         :0               Wed May 13 19:50 - 19:50  (00:00)
+kali     tty7         :0               Wed May 13 18:32 - still logged in
+lightdm  tty7         :0               Wed May 13 18:32 - 18:32  (00:00)
+kali     tty7         :0               Wed May 13 18:28 - still logged in
+lightdm  tty7         :0               Wed May 13 18:28 - 18:28  (00:00)
+kali     tty7         :0               Wed May 13 18:27 - still logged in
+lightdm  tty7         :0               Wed May 13 18:27 - 18:27  (00:00)
+lightdm  tty7         :0               Wed May 13 18:26 - still logged in
+kali     tty7         :0               Wed May 13 18:21 - still logged in
+lightdm  tty7         :0               Wed May 13 18:21 - 18:21  (00:00)
+kali     tty7         :0               Wed May 13 13:02 - still logged in
+lightdm  tty7         :0               Wed May 13 13:01 - 13:02  (00:00)
+postgres pts/2                         Wed May 13 11:57 - 11:57  (00:00)
+postgres                               Wed May 13 11:57 - 11:57  (00:00)
+kali                                   Wed May 13 11:56 - still logged in
+kali     tty7         :0               Wed May 13 11:40 - still logged in
+lightdm  tty7         :0               Wed May 13 11:40 - 11:40  (00:00)
+kali     tty7         :0               Tue May 12 14:10 - still logged in
+lightdm  tty7         :0               Tue May 12 14:10 - 14:10  (00:00)
+postgres                               Fri Mar 20 02:44 - 02:44  (00:00)
+
+wtmpdb begins Fri Mar 20 02:44:39 2026

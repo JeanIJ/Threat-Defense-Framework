@@ -1,26 +1,27 @@
 # User Account Audit — AFTER Hardening
-# Date: 2026-05-22
-# Command: cat /etc/passwd && groups [user]
+# Target: Kali Lab System
+# Analyst: Jean Irakiza
 
-root:x:0:0:root:/root:/bin/bash
+# BEFORE: kali user was in 16 groups (overprivileged)
+# AFTER: Restricted to essential groups only
+
+kali:x:1000:1000::/home/kali:/usr/bin/zsh
+  Groups: kali sudo
+  Changes: Removed adm, dialout, cdrom, floppy, audio, dip, video, plugdev, users, netdev, scanner, bluetooth, lpadmin, wireshark, vboxsf, kaboxer
+  Justification: Least privilege principle — only sudo retained for admin tasks
+
+root:x:0:0:root:/root:/usr/bin/zsh
   Status: Password rotated, key-based auth enforced
+  Note: zsh shell retained for root (Kali default)
 
-admin:x:1000:1000:Admin User:/home/admin:/bin/bash
-  Groups: admin sudo adm
-  Changes: Removed from docker group
+# Service accounts hardened:
+# - daemon, bin, sys, sync, games, man, lp, mail, news, uucp, proxy
+#   All have /usr/sbin/nologin — CORRECT (no interactive shell)
+# - www-data, backup, list — verified non-privileged
 
-backupsvc:x:1001:1001:Backup Service:/nonexistent:/usr/sbin/nologin
-  Groups: backup
-  Changes: Removed sudo, disabled interactive shell
-
-testuser:x:1002:1002:Test Account:/home/testuser:/bin/bash
-  Groups: testuser users
-  Status: DISABLED (passwd -l testuser)
-  Note: Scheduled for deletion after 7-day grace period
-
-# Deleted: guest account removed entirely
-
-# Verification:
-# sudo audit: OK
-# service accounts: Hardened
-# inactive accounts: Disabled
+# Recommendations:
+# 1. Enable 2FA for kali sudo access
+# 2. Set sudo timeout to 5 minutes
+# 3. Enable auditd to track privilege changes
+# 4. Disable unused service accounts (games, news, uucp if not needed)
+# 5. Review wireshark group — packet capture = root equivalent

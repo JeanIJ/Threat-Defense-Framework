@@ -1,24 +1,12 @@
 # Threat Defense Framework
 
-Lab portfolio documenting a simulated enterprise security assessment across four phases.
-
-## Description
-Organizes practical work in threat intelligence (OSINT/IOCs), attack & malware analysis, Linux system hardening, and network monitoring (pcaps, Snort rules). Artifacts are lab/synthetic.
-
-## Technologies
-- Linux (Kali) lab, Shell scripts, Wireshark/tcpdump, Snort, MITRE ATT&CK Navigator, OSINT tools (as used in labs)
+Notes from a lab security assessment, kept in the order the work was done. The threat group, indicators, phishing mail, and malware notes are synthetic. The packet capture and account listings were taken on the Kali VM used for the lab. None of this is data from a real engagement.
 
 ## Structure
-- `01-threat-intel/` — adversary profiling & IOCs
-- `02-attack-malware-analysis/` — phishing & sandbox notes
-- `03-system-hardening/` — hardening summary, privilege audit, scripts
-- `04-network-monitoring/` — pcaps, Snort rules, defense report
 
-## Setup / Usage
-Clone and browse phase folders and Markdown reports. Scripts are for lab environments only.
+- `01-threat-intel/` — adversary profile, OSINT notes, and indicators
+- `02-attack-malware-analysis/` — phishing email, payload notes, and sandbox behavior
+- `03-system-hardening/` — privilege audit and a hardening script for the lab host
+- `04-network-monitoring/` — packet capture, Snort rules, and a defense report
 
-## Status
-Portfolio / lab documentation project. All IOCs and traffic are synthetic or lab-generated.
-
-## Disclaimer
-No real organization data.
+The reports are markdown in each folder. `03-system-hardening/scripts/hardening.sh` changes SSH, services, and accounts on the machine where you run it, so keep it on the lab host.
